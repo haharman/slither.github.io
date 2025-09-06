@@ -33,12 +33,15 @@ export class Snake {
     const vx = Math.cos(this.angle) * speed * dt;
     const vy = Math.sin(this.angle) * speed * dt;
     const head = this.head();
-    head.x += vx;
-    head.y += vy;
+    const nx = head.x + vx;
+    const ny = head.y + vy;
     this.moveDist += Math.hypot(vx, vy);
     if (this.moveDist > this.spacing) {
-      this.points.unshift({ x: head.x, y: head.y });
+      this.points.unshift({ x: nx, y: ny });
       this.moveDist = 0;
+    } else {
+      head.x = nx;
+      head.y = ny;
     }
     const maxPoints = Math.floor(this.length / this.spacing);
     while (this.points.length > maxPoints) this.points.pop();
