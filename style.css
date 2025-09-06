@@ -1,0 +1,4 @@
+body,html{margin:0;padding:0;overflow:hidden;background:#202020;color:#fff;font-family:sans-serif}
+#game{display:block;width:100vw;height:100vh;touch-action:none;}
+#settings{position:absolute;top:10px;left:10px;background:rgba(0,0,0,0.5);padding:8px;border-radius:4px;font-size:12px}
+#settings label{display:block;margin-bottom:4px}

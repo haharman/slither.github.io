@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Snake MVP</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+<div id="settings">
+  <label>音量
+    <input type="range" id="volume" min="0" max="1" step="0.01">
+  </label>
+  <label>Bot
+    <input type="range" id="botCount" min="10" max="60" step="1">
+  </label>
+  <label>品質
+    <select id="quality">
+      <option value="low">low</option>
+      <option value="medium" selected>medium</option>
+      <option value="high">high</option>
+    </select>
+  </label>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
